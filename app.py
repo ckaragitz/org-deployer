@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
 
-    return "Hey!"
+    return "Yo!"
 
 @app.route('/create')
 def create():
@@ -17,7 +17,7 @@ def create():
     email = request.args.get('email')
     username = request.args.get('username')
 
-    subprocess.call(shlex.split('org-deployer/server/sfdx.sh ' + email + ' ' + username))
+    subprocess.call(shlex.split('./sfdx.sh ' + email + ' ' + username))
 
     data = {'Success' : 'True', 'Email' : email, 'Username' : username}
     return jsonify(data), 200

@@ -6,6 +6,11 @@ import shlex
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello():
+
+    return "Hey!"
+
 @app.route('/create')
 def create():
 

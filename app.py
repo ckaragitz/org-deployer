@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
 
-    return "Yo!"
+    return "Please send requests to the '/create' path with an email and preferred username"
 
 @app.route('/create')
 def create():

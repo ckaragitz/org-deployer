@@ -5,8 +5,8 @@ email=$1
 username=$2
 
 # JWT auth flow
-sfdx force:auth:jwt:grant --clientid 3MVG9ZF4bs_.MKujtQm6XdiIXwJuqbu5tOrrnQwFZJhCyJi1ZsGeeTwUGJzgjqkEocGbNRHTkS8m7TOmks_f3 \
---jwtkeyfile ./JWT/server.key --username ckaragitz@salesforce.dev \
+sfdx force:auth:jwt:grant --clientid YOUR CONNECTED APP CLIENT ID HERE \
+--jwtkeyfile ./JWT/server.key --username YOUR SALESFORCE DEV HUB USERNAME \
 --setdefaultdevhubusername --setalias DevHub
 
 # Create Scratch Org dynamically and open it
